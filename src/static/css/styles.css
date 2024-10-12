@@ -164,13 +164,18 @@
 
 .search_tags {
     position: relative;
-    top: 0;
     left: 10%;
-    width: 80%;
-    height: max-content;
+    width: 80%; 
+    height: 60px;
     margin-top: 10px;
-    max-height: 40px;
+    
+    display: flex;
+    align-items: center;
     overflow-x: auto;
+    white-space: nowrap;
+
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
 }
 
 .search_tag {
@@ -194,4 +199,5 @@
     outline: none;
     border: 1px solid #6C6C6C;
     display: inline-block;
+    margin-right: 5px;
 }
