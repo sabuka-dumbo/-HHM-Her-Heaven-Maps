@@ -8,6 +8,7 @@
     box-shadow: 0px 5px 25px hsla(0, 0%, 0%, 0.341);
     align-items: center;
     display: flex;
+    z-index: 10;
 }
 
 .navbar_title {
@@ -47,4 +48,92 @@
     right: 3.5vw;
     width: max-content;
     height: max-content;
+}
+
+.navbar_profile_icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 2.2vw;
+    height: 2.2vw;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.navbar_profile_drop_icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 1.4vw;
+    height: 1.4vw;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2.5px;
+}
+
+.main_part {
+    position: fixed;
+    top: 100px;
+    left: 0px;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 100px;
+    left: 0px;
+    width: 100px;
+    height: calc(100vh - 120px);
+    padding-top: 20px;
+    background-color: #CBCBCB;
+    box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.256);
+}
+
+.search {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 300px;
+    height: calc(100vh - 100px);
+    background-color: #E7E7E7;
+    box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.256);
+}
+
+.navigations {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.navigations_icons {
+    position: relative;
+    top: 0;
+    left: calc((100% - 2.7vw) / 2);
+    width: 3vw;
+    height: 3vw;
+}
+
+.navigations_text {
+    position: relative;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: black;
+    font-family: "Itim";
+    font-size: 1.3vw;
+    font-weight: bold;
 }
