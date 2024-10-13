@@ -1,3 +1,25 @@
+const rating_div = document.getElementById("rating_div");
+
+// Mapbox access token
+mapboxgl.accessToken = 'pk.eyJ1IjoiaWFqYWlhbmkiLCJhIjoiY20yNmlwM3UwMTQyZzJrc2R3anJyNWxtbyJ9.FEmpcyUrij-5j8VVlJwXzg'; // Replace with your Mapbox access token
+
+const map = new mapboxgl.Map({
+    container: 'map', // Container ID
+    style: 'mapbox://styles/mapbox/streets-v12', // Map style to use
+    center: [41.6369, 41.6168], // Starting position [lng, lat] (Batumi, Georgia)
+    zoom: 13 // Starting zoom level
+});
+
+// Event listener for click (left click)
+map.on('click', (e) => {
+    const lngLat = e.lngLat; // Get the coordinates of the click
+
+    rating_div.style.display = "block";
+
+    alert(`Coordinates: Longitude: ${lngLat.lng.toFixed(4)}, Latitude: ${lngLat.lat.toFixed(4)}`);
+});
+
+
 const burgermenu = document.getElementById("burgermenu");
 const span1 = document.getElementById("span1");
 const span2 = document.getElementById("span2");
@@ -62,6 +84,19 @@ const star2 = document.getElementById("star2");
 const star3 = document.getElementById("star3");
 const star4 = document.getElementById("star4");
 const star5 = document.getElementById("star5");
+const back_rate = document.getElementById("rate_back");
+const front_rate = document.getElementById("rate_front");
+const textarea_rate = document.getElementById("textarea_rate");
+
+back_rate.addEventListener("click", function() {
+    rating_div.style.display = "none";
+    textarea_rate.value = '';
+    star1.style.color = "orange";
+    star2.style.color = "gray";
+    star3.style.color = "gray";
+    star4.style.color = "gray";
+    star5.style.color = "gray";
+})
 
 star1.addEventListener("click", function() {
     star1.style.color = "orange";
