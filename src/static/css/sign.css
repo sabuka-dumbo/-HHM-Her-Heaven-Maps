@@ -1,17 +1,86 @@
 .part1 {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 40vw;
     height: 100vh;
-    background-color: aqua;
 }
 
 .part2 {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 40vw;
     width: 60vw;
     height: 100vh;
-    background-color: saddlebrown;
+}
+
+.sign_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+    font-size: 4vw;
+    font-family: "Itim";
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 10px;
+    background-color: #EFEFEF;
+    color: #949494;
+    font-size: 2vw;
+    font-family: "Itim";
+    font-weight: normal;
+    outline: none;
+    border-radius: 1vw;
+    border: #949494 solid 2px;
+}
+
+.submit {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 10px;
+    background-color: black;
+    color: #949494;
+    font-size: 2vw;
+    font-family: "Itim";
+    font-weight: normal;
+    outline: none;
 }
