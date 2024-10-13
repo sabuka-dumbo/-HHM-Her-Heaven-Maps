@@ -100,3 +100,91 @@
     margin-left: 25%;
     text-align: center;
 }
+
+@media screen and (max-width: 900px) {
+    .part1 {
+        display: none;
+    }
+
+    .part2 {
+        left: 0;
+        width: 100vw;
+    }
+
+    
+.title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+    font-size: 7vw;
+    font-family: "Itim";
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 10%;
+}
+
+.input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 8%;
+    margin-top: 10px;
+    background-color: #EFEFEF;
+    color: #949494;
+    font-size: 5vw;
+    font-family: "Itim";
+    font-weight: normal;
+    outline: none;
+    border-radius: 1vw;
+    border: #949494 solid 2px;
+}
+
+.submit {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 30%;
+    margin-left: 25%;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-size: 5vw;
+    font-family: "Itim";
+    font-weight: normal;
+    outline: none;
+}
+
+.switch {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: max-content;
+    font-size: 3vw;
+    font-family: "Itim";
+    font-weight: bold;
+    color: black;
+    margin-left: 14%;
+    text-align: center;
+}
+}
