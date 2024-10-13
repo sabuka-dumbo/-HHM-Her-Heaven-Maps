@@ -136,12 +136,18 @@
         <script>
             // Mapbox access token
             mapboxgl.accessToken = 'pk.eyJ1IjoiaWFqYWlhbmkiLCJhIjoiY20yNmlwM3UwMTQyZzJrc2R3anJyNWxtbyJ9.FEmpcyUrij-5j8VVlJwXzg'; // Replace with your Mapbox access token
-    
+        
             const map = new mapboxgl.Map({
                 container: 'map', // Container ID
                 style: 'mapbox://styles/mapbox/streets-v12', // Map style to use
                 center: [41.6369, 41.6168], // Starting position [lng, lat] (Batumi, Georgia)
                 zoom: 13 // Starting zoom level
+            });
+        
+            // Event listener for click (left click)
+            map.on('click', (e) => {
+                const lngLat = e.lngLat; // Get the coordinates of the click
+                alert(`Coordinates: Longitude: ${lngLat.lng.toFixed(4)}, Latitude: ${lngLat.lat.toFixed(4)}`);
             });
         </script>
     </body>
