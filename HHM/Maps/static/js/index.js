@@ -223,7 +223,7 @@ function showLocation(one, two, text) {
 
     reason_div.style.animation = "open_reason ease 1s";
     reason_div.style.display = "block";
-    reason_text.value = text;
+    reason_text.innerText = text;
 
     reason_div.addEventListener("animationend", function() {
         reason_div.style.animation = '';
