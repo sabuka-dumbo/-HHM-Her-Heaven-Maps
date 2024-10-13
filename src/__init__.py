@@ -7,8 +7,6 @@ from flask_session import Session
 from cachelib.file import FileSystemCache
 from flask_sqlalchemy import *
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'
 
 def create_app(test_config:typing.Union[None, dict] =None):
     # create and configure the app
