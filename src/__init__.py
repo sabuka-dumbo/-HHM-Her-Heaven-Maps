@@ -51,7 +51,14 @@ def create_app(test_config:typing.Union[None, dict] =None):
     @app.get("/register")
     def _register_route():
         return render_template("register.html")
+    
     @app.get("/")
     def _index_route():
+        # Check if the user is logged in
+        if not session.get("logged"):
+            # Redirect to login page if not logged in
+            return redirect("/login")
+        
+        # If logged in, render the index page
         return render_template("index.html")
     return app

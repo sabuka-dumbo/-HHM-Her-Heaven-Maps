@@ -15,11 +15,23 @@
 
         <div class="part2">
             <h1 class="title">Her Haven Maps <b style="font-size: 3vw; color: gray;">(HHM)</b></h1>
-            <input class="input" name="email" type="email" placeholder="Enter email">
-            <input class="input" name="password" type="password" placeholder="Enter password">
+            <input class="input" name="email" type="email" placeholder="Enter email" id="email">
+            <input class="input" name="password" type="password" placeholder="Enter password" id="password">
 
-            <input class="submit" type="submit">
-            <h1 class="switch">don't have account?<a href="" style="text-decoration: none; color: black;"> Register here</a></h1>
+            <input class="submit" type="submit" value="Login" id="submit">
+            <h1 class="switch"><a href="/register" style="text-decoration: none; color: black;">don't have account? Register here</a></h1>
         </div>
+
+        <script>
+            const password = document.getElementById("password");
+            const email = document.getElementById("email");
+            const submit = document.getElementById("submit");
+
+            if (password.value.length >= 3 && email.value.length !== 0) {
+                submit.disabled = false;  // Enable submit button
+            } else {
+                submit.disabled = true;  // Disable submit button
+            }
+        </script>
     </body>
 </html>
