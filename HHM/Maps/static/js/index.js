@@ -247,6 +247,6 @@ function showLocation(one, two, text) {
 
 function Search(event, list) {
     if (event.key === 'Enter') {
-
+        console.log(list)
     }
 }
