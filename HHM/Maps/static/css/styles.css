@@ -720,7 +720,7 @@
 
     100% {
         rotate: 45deg;
-        top: 3.5vw;   
+        top: 18px;   
     }
 }
 
@@ -742,7 +742,7 @@
 
     100% {
         rotate: -45deg;
-        top: -3.5vw;   
+        top: -18px;   
     }
 }
 

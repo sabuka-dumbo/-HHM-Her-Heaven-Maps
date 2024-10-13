@@ -50,10 +50,10 @@ function handleAnimationEnd() {
     } else {
         bar.style.left = "100px";
         span1.style.rotate = "45deg";
-        span1.style.top = "3.5vw";
+        span1.style.top = "18px";
         span2.style.opacity = "0";
         span3.style.rotate = "-45deg";
-        span3.style.top = "-3.5vw";
+        span3.style.top = "-18px";
         opened = true;
     }
 
