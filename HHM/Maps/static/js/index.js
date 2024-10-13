@@ -221,7 +221,7 @@ function showLocation(one, two, text) {
         essential: true 
     });
 
-    reason_div.style.animation = "ease 1s open_reason";
+    reason_div.style.animation = "open_reason ease 1s";
     reason_div.style.display = "block";
     reason_text.value = text;
 
@@ -229,7 +229,6 @@ function showLocation(one, two, text) {
         reason_div.style.animation = '';
         reason_div.style.top = "0px";
         reason_div.style.display = "block"
-        console.log("s")
 
         setInterval(function() {
             reason_div.style.animation = "ease 1s close_reason";
