@@ -2,6 +2,8 @@ import os
 import typing
 import dotenv
 from flask import Flask, render_template, request, session
+from flask_session import Session
+from cachelib.file import FileSystemCache
 
 def create_app(test_config:typing.Union[None, dict] =None):
     # create and configure the app
@@ -10,10 +12,9 @@ def create_app(test_config:typing.Union[None, dict] =None):
     # Secret key is used to encrypt the session cookie
     app.secret_key = os.urandom(32)
 
-    app.config['SESSION_TYPE'] = 'redis'
-    app.config['SESSION_PERMANENT'] = False
-    app.config['SESSION_USE_SIGNER'] = True
-#    app.config['SESSION_REDIS'] = redis.from_url('redis://127.0.0.1:6379')
+    app.config['SESSION_TYPE'] = 'cachelib'
+    app.config['SESSION_SERIALIZATION_FORMAT'] = 'json'
+    app.config['SESSION_CACHELIB'] = FileSystemCache(threshold=500, cache_dir="/sessions"),
 
 # yo register and login is done (i'll do responsives later) now you can add login and register funcs
 # and one more thing. can you make page 404 erro (in case if someone opens page that we dont have like
