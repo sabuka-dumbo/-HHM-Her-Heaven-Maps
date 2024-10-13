@@ -383,12 +383,13 @@
     padding: 20px;
     margin-left: 10%;
     resize: none;
+    margin-top: 10px;
 }
 
 .submit_rate {
     position: absolute;
     bottom: 20px;
-    right: calc(10% + 2vw);
+    right: calc(9% + 2vw);
     width: max-content;
     height: max-content;
     border-radius: 0;
