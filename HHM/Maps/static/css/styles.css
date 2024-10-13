@@ -352,6 +352,9 @@
 }
 
 .rate_div {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
     position: relative;
     top: 0;
     left: 0;
@@ -378,6 +381,8 @@
     width: calc(80% - 40px);
     height: calc(40% - 40px);
     padding: 20px;
+    margin-left: 10%;
+    resize: none;
 }
 
 
