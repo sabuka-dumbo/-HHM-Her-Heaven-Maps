@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth import login as auth_login, authenticate
 from django.contrib.auth.models import User
 from django.contrib import messages
+from .models import *
 
 # Create your views here.
 def index(request):
