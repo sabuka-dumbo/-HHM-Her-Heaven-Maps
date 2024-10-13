@@ -7,6 +7,7 @@
         
         <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
     </head>
     <body class="body">
         <!-- navbar -->
@@ -30,6 +31,12 @@
 
         <div class="main_part">
             <div class="sidebar">
+                <div class="burgermenu" id="burgermenu">
+                    <span class="span span1" id="span1"></span>
+                    <span class="span span2" id="span2"></span>
+                    <span class="span span3" id="span3"></span>
+                </div>
+
                 <div class="navigations">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house navigations_icons" viewBox="0 0 16 16">
                         <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
@@ -55,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="search">
+            <div class="search" id="search">
                 <input class="search_field" name="search_field" type="search" placeholder="Search">
 
                 <div class="search_tags">
@@ -84,9 +91,57 @@
 
                 <div class="searched_place_div">
                     <h1 class="sp_name">Place name here</h1>
+                    <div class="sp_open">Open</div>
+                    <h1 class="sp_street">Stree name here</h1>
+                    <hr class="sp_line">
+                </div>
+
+                <div class="searched_place_div">
+                    <h1 class="sp_name">Place name here</h1>
+                    <div class="sp_close">Close</div>
+                    <h1 class="sp_street">Stree name here</h1>
+                    <hr class="sp_line">
+                </div>
+
+                <div class="searched_place_div">
+                    <h1 class="sp_name">Place name here</h1>
+                    <div class="sp_open">Open</div>
+                    <h1 class="sp_street">Stree name here</h1>
+                    <hr class="sp_line">
+                </div>
+
+                <div class="searched_place_div">
+                    <h1 class="sp_name">Place name here</h1>
+                    <div class="sp_open">Open</div>
+                    <h1 class="sp_street">Stree name here</h1>
+                    <hr class="sp_line">
+                </div>
+
+                <div class="searched_place_div">
+                    <h1 class="sp_name">Place name here</h1>
+                    <div class="sp_open">Open</div>
+                    <h1 class="sp_street">Stree name here</h1>
+                    <hr class="sp_line">
                 </div>
             </div>
+
+            <div class="map" id="map"></div>
         </div>
-        <scirpt></scirpt>
+
+
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+        <script>
+            // Mapbox access token
+            mapboxgl.accessToken = 'pk.eyJ1IjoiaWFqYWlhbmkiLCJhIjoiY20yNmlwM3UwMTQyZzJrc2R3anJyNWxtbyJ9.FEmpcyUrij-5j8VVlJwXzg'; // Replace with your Mapbox access token
+    
+            const map = new mapboxgl.Map({
+                container: 'map', // Container ID
+                style: 'mapbox://styles/mapbox/streets-v12', // Map style to use
+                center: [41.6369, 41.6168], // Starting position [lng, lat] (Batumi, Georgia)
+                zoom: 13 // Starting zoom level
+            });
+        </script>
     </body>
 </html>
