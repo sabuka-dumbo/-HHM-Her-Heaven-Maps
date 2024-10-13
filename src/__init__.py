@@ -1,21 +1,10 @@
+import hashlib
 import os
 import typing
 import dotenv
-from flask import Flask, render_template, request, session
+from flask import Flask, redirect, render_template, request, session
 from flask_session import Session
 from cachelib.file import FileSystemCache
-# DUDE we need to work separatly
-# i work on the backend and you focus on the front end
-# We use git to merge after 
-# um can i run server? oh oka
-# it give me errors
-# for now it's normal you need to run in a virtualenv
-# pip install -r requirements.txt
-# The only pb is that i never work using windows
-# and powershell is doing stange thing, which don't allow me to use it correctly through live share
-# and tbh windows isn't always good for developpment
-# help me somehow to run and ill do my job
-# Ju
 
 def create_app(test_config:typing.Union[None, dict] =None):
     # create and configure the app
@@ -24,9 +13,14 @@ def create_app(test_config:typing.Union[None, dict] =None):
     # Secret key is used to encrypt the session cookie
     app.secret_key = os.urandom(32)
 
+    # ------------- Session setup -------------------------------
     app.config['SESSION_TYPE'] = 'cachelib'
     app.config['SESSION_SERIALIZATION_FORMAT'] = 'json'
-    app.config['SESSION_CACHELIB'] = FileSystemCache(threshold=500, cache_dir="/sessions"),
+    app.config["SESSION_CACHELIB"] = (
+        FileSystemCache(threshold=500, cache_dir="./sessions"),
+    )
+    Session(app)
+    # -----------------------------------------------------------
 
     # If test_config is supplied, it most likely mean we are running tests
     if test_config:
@@ -37,11 +31,22 @@ def create_app(test_config:typing.Union[None, dict] =None):
         # We will use flask config as config for everything
         app.config.from_mapping(config)
 
-    
-    @app.get("/login")
+    @app.route("/login", methods=["GET", "POST"])
     def _login_route():
         params = request.form
-        return render_template("login.html")
+        if request.method == "GET":
+            return render_template("login.html")
+        else:
+            email = params.get("email")
+            password = params.get("password")
+            if session["logged"]:
+                if request.args.get("redirect"):
+                    return redirect(request.args.get("redirect"))
+                else:
+                    return redirect("/")
+            else:
+                password_hash = hashlib.md5(password).hexdigest()
+
     @app.get("/register")
     def _register_route():
         return render_template("register.html")
