@@ -63,3 +63,42 @@ const star3 = document.getElementById("star3");
 const star4 = document.getElementById("star4");
 const star5 = document.getElementById("star5");
 
+star1.addEventListener("click", function() {
+    star1.style.color = "orange";
+    star2.style.color = "gray";
+    star3.style.color = "gray";
+    star4.style.color = "gray";
+    star5.style.color = "gray";
+})
+
+star2.addEventListener("click", function() {
+    star1.style.color = "orange";
+    star2.style.color = "orange";
+    star3.style.color = "gray";
+    star4.style.color = "gray";
+    star5.style.color = "gray";
+})
+
+star3.addEventListener("click", function() {
+    star1.style.color = "orange";
+    star2.style.color = "orange";
+    star3.style.color = "orange";
+    star4.style.color = "gray";
+    star5.style.color = "gray";
+})
+
+star4.addEventListener("click", function() {
+    star1.style.color = "orange";
+    star2.style.color = "orange";
+    star3.style.color = "orange";
+    star4.style.color = "orange";
+    star5.style.color = "gray";
+})
+
+star5.addEventListener("click", function() {
+    star1.style.color = "orange";
+    star2.style.color = "orange";
+    star3.style.color = "orange";
+    star4.style.color = "orange";
+    star5.style.color = "orange";
+})
