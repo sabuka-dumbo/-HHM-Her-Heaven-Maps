@@ -4,10 +4,18 @@ import dotenv
 from flask import Flask, render_template, request, session
 from flask_session import Session
 from cachelib.file import FileSystemCache
-# you can't understand how hard it is for me to execute commands lol
-# It's completly cursed 
-
-
+# DUDE we need to work separatly
+# i work on the backend and you focus on the front end
+# We use git to merge after 
+# um can i run server? oh oka
+# it give me errors
+# for now it's normal you need to run in a virtualenv
+# pip install -r requirements.txt
+# The only pb is that i never work using windows
+# and powershell is doing stange thing, which don't allow me to use it correctly through live share
+# and tbh windows isn't always good for developpment
+# help me somehow to run and ill do my job
+# Ju
 
 def create_app(test_config:typing.Union[None, dict] =None):
     # create and configure the app
