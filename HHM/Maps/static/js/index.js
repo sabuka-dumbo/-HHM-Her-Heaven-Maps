@@ -1,4 +1,6 @@
 const rating_div = document.getElementById("rating_div");
+let Longitude = '';
+let Latitude = '';
 
 // Mapbox access token
 mapboxgl.accessToken = 'pk.eyJ1IjoiaWFqYWlhbmkiLCJhIjoiY20yNmlwM3UwMTQyZzJrc2R3anJyNWxtbyJ9.FEmpcyUrij-5j8VVlJwXzg'; // Replace with your Mapbox access token
@@ -15,8 +17,9 @@ map.on('click', (e) => {
     const lngLat = e.lngLat; // Get the coordinates of the click
 
     rating_div.style.display = "block";
-
-    alert(`Coordinates: Longitude: ${lngLat.lng.toFixed(4)}, Latitude: ${lngLat.lat.toFixed(4)}`);
+    Longitude = lngLat.lng.toFixed(4);
+    Latitude = lngLat.lat.toFixed(4)
+    console.log(Longitude, " da ", Latitude)
 });
 
 
