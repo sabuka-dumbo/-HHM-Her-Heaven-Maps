@@ -143,5 +143,17 @@ star5.addEventListener("click", function() {
 })
 
 submit.addEventListener("click", function() {
-    
+    fetch("/info/", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({  }),
+    })
+    .then(response => response.json())
+    .then(data => {
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 })
