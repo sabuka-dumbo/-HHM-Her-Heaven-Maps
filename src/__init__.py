@@ -5,7 +5,6 @@ import dotenv
 from flask import Flask, redirect, render_template, request, session
 from flask_session import Session
 from cachelib.file import FileSystemCache
-from flask_sqlalchemy import *
 
 
 def create_app(test_config:typing.Union[None, dict] =None):
