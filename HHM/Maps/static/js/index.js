@@ -262,5 +262,5 @@ function showLocation(one, two, text, user, current) {
 }
 
 function favorite(one, two, user) {
-console.log(one,two,user)
+    console.log(one,two,user)
 }
