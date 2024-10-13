@@ -19,6 +19,16 @@ def create_app(test_config:typing.Union[None, dict] =None):
 
         app.config.from_mapping(config)
 
+    
+    # u gotta switch the /
+    #http://127.0.0.1:5000/login is this?
+    # wth
+    @app.get("/login")
+    def _login_route():
+        return render_template("login.html")
+    @app.get("/register")
+    def _register_route():
+        return render_template("register.html")
     @app.get("/")
     def _index_route():
         return render_template("index.html")

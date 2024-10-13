@@ -1,2 +1,8 @@
 # -HHM-Her-Heaven-Maps
-s
+
+
+# Dev notice
+To run the server in debug mode, execute the following 
+```bash
+flask --app src run
+```
