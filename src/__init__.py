@@ -16,10 +16,6 @@ def create_app(test_config:typing.Union[None, dict] =None):
     app.config['SESSION_SERIALIZATION_FORMAT'] = 'json'
     app.config['SESSION_CACHELIB'] = FileSystemCache(threshold=500, cache_dir="/sessions"),
 
-# yo register and login is done (i'll do responsives later) now you can add login and register funcs
-# and one more thing. can you make page 404 erro (in case if someone opens page that we dont have like
-# 127.0.0.1:5000/nigga/ or smth lol)
-
     # If test_config is supplied, it most likely mean we are running tests
     if test_config:
         app.config.from_mapping(test_config)

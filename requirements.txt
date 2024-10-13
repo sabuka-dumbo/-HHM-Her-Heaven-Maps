@@ -1,1 +1,4 @@
-flask_session
+flask
+Flask-session
+cachelib
+python-dotenv
