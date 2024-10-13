@@ -11,10 +11,13 @@ import json
 
 # Create your views here.
 def index(request):
-    rates = Rate.objects.all()
-    return render(request, "index.html", {
-        "rates": rates,
-    })
+    if request.user.is_authenticated:
+        rates = Rate.objects.all()
+        return render(request, "index.html", {
+            "rates": rates,
+        })
+    else:
+        return HttpResponseRedirect(reverse('login'))
 
 def register(request):
     if request.user.is_authenticated:
@@ -97,19 +100,6 @@ def rate(request):
             return JsonResponse({"error": str(e)}, status=400)
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=500)
-
-    return JsonResponse({
-        "example": done,
-    })
-
-def favorite(request):
-    if request.method == "POST":
-        data_from_js = json.loads(request.body.decode('utf-8'))
-        Long = data_from_js.get('one')
-        Lat = data_from_js.get('two')
-        current = request.user
-        user = data_from_js.get('user')
-        done = "Yes"
 
     return JsonResponse({
         "example": done,

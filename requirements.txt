@@ -1,4 +1,1 @@
-flask
-Flask-session
-cachelib
-python-dotenv
+Django
