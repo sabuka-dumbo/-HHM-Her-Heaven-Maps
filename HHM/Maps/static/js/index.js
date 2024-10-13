@@ -225,19 +225,4 @@ function showLocation(one, two, text) {
     reason_div.style.display = "block";
     reason_text.value = text;
 
-    reason_div.addEventListener("animationend", function() {
-        reason_div.style.animation = '';
-        reason_div.style.top = "0px";
-        reason_div.style.display = "block"
-        console.log("s")
-
-        setInterval(function() {
-            reason_div.style.animation = "ease 1s close_reason";
-
-            reason_div.addEventListener('animationend', function() {
-                reason_div.style.animation = '';
-                reason_div.style.display = "none";
-            })
-        }, 10000);
-    })
 }
