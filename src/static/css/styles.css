@@ -201,3 +201,10 @@
     display: inline-block;
     margin-right: 5px;
 }
+
+.searched_title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: ma;
+}
