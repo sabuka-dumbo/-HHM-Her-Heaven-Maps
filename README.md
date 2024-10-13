@@ -30,6 +30,12 @@ Her Heaven Map allows users to:
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/yourusername/her-heaven-map.git
+2. **Install requirements.txt**
+   ```bash
    pip install -r requirements.txt
+3. **Change Directory to HHm**
+   ```bash
    cd HHM
+4. **Runserver**
+   ```bash
    python manage.py runserver
