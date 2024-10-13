@@ -385,6 +385,21 @@
     resize: none;
 }
 
+.submit_rate {
+    position: absolute;
+    bottom: 20px;
+    right: calc(10% + 2vw);
+    width: max-content;
+    height: max-content;
+    border-radius: 0;
+    background-color: black;
+    color: white;
+    font-size: 2vw;
+    font-family: "Itim";
+    font-weight: bold;
+    padding: 5px;
+}
+
 
 
 
