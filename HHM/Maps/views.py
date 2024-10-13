@@ -63,3 +63,31 @@ def login(request):
 
         else:
             return render(request, "login.html")
+
+@csrf_exempt
+def rate(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+            GID = data_from_js.get('GID')
+            user = request.user
+            user_info = Userinfo.objects.all().get(user=user)
+            gradebook = Gradebook.objects.all().get(id=GID)
+            student_info = Student.objects.all().get(user=user, gradebook=gradebook)
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+    return JsonResponse({
+        "attended": student_info.attendance, 
+        "missed": student_info.missed, 
+        "one": student_info.one,
+        "two": student_info.two,
+        "three": student_info.three,
+        "four": student_info.four,
+        "five": student_info.five,
+        "six": student_info.six,
+        "seven": student_info.seven,
+        "eight": student_info.eight,
+        "nine": student_info.nine,
+        "ten": student_info.ten,
+        })
