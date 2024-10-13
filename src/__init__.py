@@ -4,6 +4,10 @@ import dotenv
 from flask import Flask, render_template, request, session
 from flask_session import Session
 from cachelib.file import FileSystemCache
+# you can't understand how hard it is for me to execute commands lol
+# It's completly cursed 
+
+
 
 def create_app(test_config:typing.Union[None, dict] =None):
     # create and configure the app
