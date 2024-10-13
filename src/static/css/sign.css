@@ -1,0 +1,17 @@
+.part1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 40vw;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.part2 {
+    position: relative;
+    top: 0;
+    left: 40vw;
+    width: 60vw;
+    height: 100vh;
+    background-color: saddlebrown;
+}
