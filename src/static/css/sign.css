@@ -2,15 +2,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 40vw;
+    width: 45vw;
     height: 100vh;
 }
 
 .part2 {
     position: absolute;
     top: 0;
-    left: 40vw;
-    width: 60vw;
+    left: 45vw;
+    width: 55vw;
     height: 100vh;
 }
 
@@ -29,7 +29,7 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 70%;
     height: max-content;
     margin: 0;
     padding: 0;
@@ -46,7 +46,7 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 70%;
     height: max-content;
     padding: 0;
     margin: 0;
@@ -80,9 +80,18 @@
     margin-left: 30%;
     margin-top: 10px;
     background-color: black;
-    color: #949494;
+    color: white;
     font-size: 2vw;
     font-family: "Itim";
     font-weight: normal;
     outline: none;
+}
+
+.switch {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+
 }
