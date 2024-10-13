@@ -206,7 +206,10 @@ submit.addEventListener("click", function() {
     
 })
 
-function showLocation(one, two) {
+const reason_div = document.getElementById("reason_div");
+const reason_text = document.getElementById("reason_text");
+
+function showLocation(one, two, text) {
     console.log(one, two)
     
     new mapboxgl.Marker()
@@ -217,4 +220,18 @@ function showLocation(one, two) {
         center: [one, two],
         essential: true 
     });
+
+    reason_div.style.animation = "ease 1s open_reason";
+    reason_div.style.display = "block";
+    reason_text.value = text;
+
+    reason_div.addEventListener("animationend", function() {
+        reason_div.style.animation = '';
+        reason_div.style.top = "0px";
+        reason_div.style.display = "block"
+
+        setInterval(function() {
+            
+        }, 10000);
+    })
 }

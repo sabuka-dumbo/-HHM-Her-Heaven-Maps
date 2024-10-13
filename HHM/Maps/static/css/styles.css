@@ -408,6 +408,31 @@
     padding: 5px;
 }
 
+.reason_div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: max-content;
+    background-color: lime;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    z-index: 8000;
+}
+
+.reason_text {
+    position: relative;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: max-content;
+    font-size: 2vw;
+    font-family: "Itim";
+    font-weight: bold;
+    color: black;
+    display: none;
+}
+
 
 
 
@@ -763,6 +788,26 @@
     100% {
         left: -300px;
         display: none;
+    }
+}
+
+@keyframes open_reason {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes open_reason {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: -100px;
     }
 }
 

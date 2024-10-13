@@ -93,7 +93,7 @@
                 {% for i in rates %}
                     <div class="searched_place_div">
                         <h1 class="sp_name">{{ i }}</h1> 
-                        <div class="sp_open" onclick="showLocation('{{ i.Longitude|floatformat:6 }}', '{{ i.Latitude|floatformat:6 }}')">Show</div>
+                        <div class="sp_open" onclick="showLocation('{{ i.Longitude|floatformat:6 }}', '{{ i.Latitude|floatformat:6 }}', '{{ i.reason }}')">Show</div>
                         <h1 class="sp_street">{{ i.Longitude }} and {{ i.Latitude }}</h1> 
                         <hr class="sp_line">
                     </div>
@@ -132,8 +132,8 @@
             </div>
         </div>
 
-        <div class="reason_div">
-            <h1 class="reason_text">some text here</h1>
+        <div class="reason_div" id="reason_div">
+            <h1 class="reason_text" id="reason_text">some text here</h1>
         </div>
 
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
