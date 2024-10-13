@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
+        <link href="{% static 'css/sign.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="part1">
+            <img class="sign_img" src="https://img.freepik.com/free-photo/portrait-young-woman-browsing-mobile-phone_23-2148597701.jpg?t=st=1728802579~exp=1728806179~hmac=f6ffd6d66a84544eacbcdddbe851f0bee3b64bbd5a0fd99c1091847e340804bd&w=740">
+        </div>
+
+        <form class="part2" action="" method="">
+            <h1 class="title">Her Haven Maps <b style="font-size: 3vw; color: gray;">(HHM)</b></h1>
+            <input class="input" name="email" type="email" placeholder="Enter email" id="email">
+            <input class="input" name="country" type="text" placeholder="Enter your country" id="country">
+            <input class="input" name="city" type="text" placeholder="Enter your city" id="city">
+            <input class="input" name="password" type="password" placeholder="Enter password" id="password">
+            <input class="input" name="confirm" type="password" placeholder="Confirm password" id="confirm">
+        
+            <input class="submit" type="submit" value="Register" id="submit" disabled>
+            <h1 class="switch"><a href="/login" style="text-decoration: none; color: black;">Already have an account? Login here</a></h1>
+        </form>
+        
+        <script>
+            const password = document.getElementById("password");
+            const confirm = document.getElementById("confirm");
+            const email = document.getElementById("email");
+            const country = document.getElementById("country");
+            const city = document.getElementById("city");
+            const submit = document.getElementById("submit");
+        
+            password.addEventListener("input", validateForm);
+            confirm.addEventListener("input", validateForm);
+            email.addEventListener("input", validateForm);
+            country.addEventListener("input", validateForm);
+            city.addEventListener("input", validateForm);
+        
+            function validateForm() {
+                if (password.value.length >= 3 && 
+                    confirm.value.length >= 3 && 
+                    email.value.length !== 0 && 
+                    country.value.length !== 0 && 
+                    city.value.length !== 0 && 
+                    password.value === confirm.value) {
+                    submit.disabled = false;
+                } else {
+                    submit.disabled = true;
+                }
+            }
+        
+            validateForm();
+        </script>
+    </body>
+</html>

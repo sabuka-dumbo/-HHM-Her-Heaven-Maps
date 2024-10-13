@@ -5,6 +5,12 @@ import dotenv
 from flask import Flask, redirect, render_template, request, session
 from flask_session import Session
 from cachelib.file import FileSystemCache
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///your_database.db'  # Replace with your database URI
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 
 def create_app(test_config:typing.Union[None, dict] =None):
