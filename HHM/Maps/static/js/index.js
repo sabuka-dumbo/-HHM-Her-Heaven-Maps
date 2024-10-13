@@ -55,3 +55,11 @@ burgermenu.addEventListener("click", function() {
         span1.addEventListener("animationend", handleAnimationEnd);
     }
 });
+
+
+const star1 = document.getElementById("star1");
+const star2 = document.getElementById("star2");
+const star3 = document.getElementById("star3");
+const star4 = document.getElementById("star4");
+const star5 = document.getElementById("star5");
+
