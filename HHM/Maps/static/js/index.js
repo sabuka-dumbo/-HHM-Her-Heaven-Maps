@@ -90,6 +90,7 @@ const star5 = document.getElementById("star5");
 const back_rate = document.getElementById("rate_back");
 const front_rate = document.getElementById("rate_front");
 const textarea_rate = document.getElementById("textarea_rate");
+const submit = document.getElementById("submit_rate");
 
 back_rate.addEventListener("click", function() {
     rating_div.style.display = "none";
@@ -139,4 +140,8 @@ star5.addEventListener("click", function() {
     star3.style.color = "orange";
     star4.style.color = "orange";
     star5.style.color = "orange";
+})
+
+submit.addEventListener("click", function() {
+    
 })
