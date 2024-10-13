@@ -292,6 +292,18 @@
 
 }
 
+.map {
+    position: fixed;
+    left: 400px;
+    width: calc(100vw - 400px);
+    height: calc(100vh - 100px);
+}
+
+
+
+
+
+
 /* scrollbar settings */
 
 /* width */

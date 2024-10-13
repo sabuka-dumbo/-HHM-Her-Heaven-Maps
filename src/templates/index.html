@@ -7,6 +7,7 @@
         
         <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
     </head>
     <body class="body">
         <!-- navbar -->
@@ -117,7 +118,22 @@
                     <hr class="sp_line">
                 </div>
             </div>
+
+            <div class="map" id="map"></div>
         </div>
-        <scirpt></scirpt>
+
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+        <script>
+            // Set your Mapbox access token
+            mapboxgl.accessToken = 'pk.eyJ1IjoiaWFqYWlhbmkiLCJhIjoiY20yNmlwM3UwMTQyZzJrc2R3anJyNWxtbyJ9.FEmpcyUrij-5j8VVlJwXzg'; // Replace with your Mapbox access token
+    
+            const map = new mapboxgl.Map({
+                container: 'map', // Container ID
+                style: 'mapbox://styles/mapbox/streets-v12', // Map style to use
+                center: [41.6369, 41.6168], // Starting position [lng, lat] (Batumi, Georgia)
+                zoom: 13 // Starting zoom level
+            });
+        </script>
     </body>
 </html>
