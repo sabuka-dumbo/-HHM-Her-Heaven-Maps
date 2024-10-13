@@ -14,7 +14,7 @@
         <!-- navbar -->
 
         <nav class="navbar">
-            <h1 class="navbar_title">Her Haven Maps <h6 class="navbar_country_title">Country, city</h6></h1>
+            <h1 class="navbar_title">Her Haven Maps <h6 class="navbar_country_title">{% if request.user.is_authenticated %}{{ request.user.country }}, {{ request.user.city }}{% else %}Country, city{% endif %}</h6></h1>
             
             <div class="navbar_profile">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle navbar_profile_icon" viewBox="0 0 16 16">
