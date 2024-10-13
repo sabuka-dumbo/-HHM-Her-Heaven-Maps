@@ -221,6 +221,10 @@ function showLocation(one, two, text) {
         essential: true 
     });
 
+    if (text < 1) {
+        text = 'No additional comment!'
+    }
+
     reason_div.style.animation = "open_reason ease 1s";
     reason_div.style.display = "block";
     reason_text.innerText = text;

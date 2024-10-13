@@ -418,6 +418,7 @@
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
     z-index: 10000;
+    display: none;
 }
 
 .reason_text {
