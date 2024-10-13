@@ -706,6 +706,110 @@
         width: 5vw;
         height: 5vw;
     }
+
+    
+.searched_title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    margin-left: 10%;
+    margin-top: 10px;
+    font-size: 4vw;
+    font-family: "Itim";
+    font-weight: bold;
+}
+
+.searched_place_div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.sp_name {
+    position: relative;
+    top: 4px;
+    left: 0;
+    width: 55%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    margin-left: 10%;
+    font-size: 3vw;
+    font-family: "Itim";
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sp_open {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 15%;
+    margin: 0;
+    padding: 7px;
+    background-color: lime;
+    margin-right: 10%;
+    font-size: 3vw;
+    font-family: "Itim";
+    font-weight: bold;
+    border-radius: 1.5vw;
+    color: white;
+}
+
+.sp_close {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 15%;
+    margin: 0;
+    padding: 7px;
+    background-color: red;
+    margin-right: 10%;
+    font-size: 3vw;
+    font-family: "Itim";
+    font-weight: bold;
+    border-radius: 1.5vw;
+    color: white;
+}
+
+.sp_street {
+    position: relative;
+    top: -8px;
+    left: 0;
+    width: 80%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    margin-left: 10%;
+    font-size: 4vw;
+    font-family: "Itim";
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #949494;
+}
+
+.sp_line {
+    position: relative;
+    top: -8px;
+    left: 0;
+    width: 80%;
+    margin-left: 10%;
+    border: #6C6C6C 2px solid;
+    padding: 0;
+
+}
     
 }
 
