@@ -91,6 +91,7 @@
     padding-top: 20px;
     background-color: #CBCBCB;
     box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.256);
+    overflow-y: auto;
 }
 
 .search {
@@ -102,6 +103,8 @@
     padding-top: 20px;
     background-color: #E7E7E7;
     box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.256);
+    overflow-y: auto;
+
 }
 
 .navigations {
@@ -229,11 +232,84 @@
 
 .sp_name {
     position: relative;
-    top: 0;
+    top: 4px;
     left: 0;
-    width: 60%;
-    height: max-content;
+    width: 55%;
+    height: 40px;
     margin: 0;
     padding: 0;
     margin-left: 10%;
+    font-size: 1.8vw;
+    font-family: "Itim";
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sp_open {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 15%;
+    margin: 0;
+    padding: 7px;
+    background-color: lime;
+    margin-right: 10%;
+    font-size: 1.5vw;
+    font-family: "Itim";
+    font-weight: bold;
+    border-radius: 1.5vw;
+    color: white;
+}
+
+.sp_street {
+    position: relative;
+    top: -8px;
+    left: 0;
+    width: 80%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    margin-left: 10%;
+    font-size: 1.6vw;
+    font-family: "Itim";
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #949494;
+}
+
+.sp_line {
+    position: relative;
+    top: -8px;
+    left: 0;
+    width: 80%;
+    margin-left: 10%;
+    border: #6C6C6C 2px solid;
+    padding: 0;
+
+}
+
+/* scrollbar settings */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
 }
