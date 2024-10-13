@@ -8,5 +8,5 @@ urlpatterns = [
     path('register/', views.register, name="register"),
 
     ## API paths
-    path('/rate/', views.rate, index="rate"),
+    path('rate/', views.rate, name="rate"),
 ]

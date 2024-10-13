@@ -5,10 +5,16 @@ from django.contrib.auth import login as auth_login, authenticate
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .models import *
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html")
+    rates = Rate.objects.all()
+    return render(request, "index.html", {
+        "rates": rates,
+    })
 
 def register(request):
     if request.user.is_authenticated:
@@ -63,31 +69,34 @@ def login(request):
 
         else:
             return render(request, "login.html")
-
-@csrf_exempt
 def rate(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
-            GID = data_from_js.get('GID')
-            user = request.user
-            user_info = Userinfo.objects.all().get(user=user)
-            gradebook = Gradebook.objects.all().get(id=GID)
-            student_info = Student.objects.all().get(user=user, gradebook=gradebook)
+            Long = data_from_js.get('Long')
+            Lat = data_from_js.get('Lang')
+            rating_value = data_from_js.get('rate')
+            userr = request.user
+            reason_text = data_from_js.get('reason')
+            done = "Yes"
+
+            if userr.is_authenticated and Long and Lat and rating_value is not None:
+                new_rate = Rate.objects.create(
+                    user=userr, 
+                    rate=rating_value, 
+                    reason=reason_text, 
+                    Longitude=Long, 
+                    Latitude=Lat
+                )
+                done = "Yes"  
+            else:
+                done = "Nope"  
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
+        except Exception as e:
+            return JsonResponse({"error": str(e)}, status=500)
+
     return JsonResponse({
-        "attended": student_info.attendance, 
-        "missed": student_info.missed, 
-        "one": student_info.one,
-        "two": student_info.two,
-        "three": student_info.three,
-        "four": student_info.four,
-        "five": student_info.five,
-        "six": student_info.six,
-        "seven": student_info.seven,
-        "eight": student_info.eight,
-        "nine": student_info.nine,
-        "ten": student_info.ten,
-        })
+        "example": done,
+    })

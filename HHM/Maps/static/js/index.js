@@ -143,17 +143,78 @@ star5.addEventListener("click", function() {
 })
 
 submit.addEventListener("click", function() {
-    fetch("/info/", {
+    let rate = 0
+    if (star1.style.color == "orange") {
+        rate++;
+    }
+    if (star2.style.color == "orange") {
+        rate++;
+    }
+    if (star3.style.color == "orange") {
+        rate++;
+    }
+    if (star4.style.color == "orange") {
+        rate++;
+    }
+    if (star5.style.color == "orange") {
+        rate++;
+    }
+
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    
+    const csrftoken = getCookie('csrftoken');
+    
+    fetch("/rate/", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken,
         },
-        body: JSON.stringify({  }),
+        body: JSON.stringify({ 
+            Long: Longitude, 
+            Lang: Latitude, 
+            reason: textarea_rate.value, 
+            rate: rate 
+        }),
     })
     .then(response => response.json())
     .then(data => {
+        rating_div.style.display = "none";
+        textarea_rate.value = '';
+        star1.style.color = "orange";
+        star2.style.color = "gray";
+        star3.style.color = "gray";
+        star4.style.color = "gray";
+        star5.style.color = "gray";
     })
     .catch(error => {
         console.error('Error:', error);
     });
+    
 })
+
+function showLocation(one, two) {
+    console.log(one, two)
+    
+    new mapboxgl.Marker()
+        .setLngLat([one, two])
+        .addTo(map); 
+
+    map.flyTo({
+        center: [one, two],
+        essential: true 
+    });
+}
