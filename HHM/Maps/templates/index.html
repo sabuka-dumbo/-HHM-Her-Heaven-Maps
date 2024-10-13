@@ -71,7 +71,7 @@
                 {% for i in rates %}
                     <div class="searched_place_div">
                         <h1 class="sp_name">{{ i }}</h1> 
-                        <div class="sp_open" onclick="showLocation('{{ i.Longitude|floatformat:6 }}', '{{ i.Latitude|floatformat:6 }}', '{{ i.reason }}')">Show</div>
+                        <div class="sp_open" onclick="showLocation('{{ i.Longitude|floatformat:6 }}', '{{ i.Latitude|floatformat:6 }}', '{{ i.reason }}', '{{ i.user }}', '{{ request.user }}')">Show</div>
                         <h1 class="sp_street">{% if i.reason != '' %}{{ i.reason }}{% else %}No comment!{% endif %}</h1> 
                         <hr class="sp_line">
                     </div>

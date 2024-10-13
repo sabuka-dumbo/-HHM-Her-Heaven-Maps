@@ -425,12 +425,22 @@
     position: relative;
     top: 0;
     left: 5%;
-    width: 90%;
+    width: 80%;
     height: max-content;
     font-size: 2vw;
     font-family: "Itim";
     font-weight: bold;
     color: black;
+}
+
+.reason_icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 2vw;
+    height: 2vw;
+    margin-right: 20px;
 }
 
 
