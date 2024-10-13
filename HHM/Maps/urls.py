@@ -9,4 +9,5 @@ urlpatterns = [
 
     ## API paths
     path('rate/', views.rate, name="rate"),
+    path('favorite/', views.favorite, name="favorite"),
 ]

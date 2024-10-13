@@ -69,6 +69,7 @@ def login(request):
 
         else:
             return render(request, "login.html")
+        
 def rate(request):
     if request.method == "POST":
         try:
@@ -96,6 +97,19 @@ def rate(request):
             return JsonResponse({"error": str(e)}, status=400)
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=500)
+
+    return JsonResponse({
+        "example": done,
+    })
+
+def favorite(request):
+    if request.method == "POST":
+        data_from_js = json.loads(request.body.decode('utf-8'))
+        Long = data_from_js.get('one')
+        Lat = data_from_js.get('two')
+        current = request.user
+        user = data_from_js.get('user')
+        done = "Yes"
 
     return JsonResponse({
         "example": done,
