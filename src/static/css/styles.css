@@ -315,34 +315,6 @@
     height: calc(100vh - 100px);
 }
 
-.pop_page_back {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    border-radius: 2vw;
-    border: 0;
-    background-color: #6e6e6e76;
-    width: 100%;
-    height: 100%;
-    overflow: none;
-}
-
-.pop_page {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100001;
-    border-radius: 2vw;
-    border: 0;
-    background-color: #9e9e9e;
-    width: 50%;
-    height: 50%;
-    overflow: none;
-}
-
 
 
 
