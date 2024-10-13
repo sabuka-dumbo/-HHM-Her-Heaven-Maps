@@ -417,7 +417,7 @@
     background-color: lime;
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
-    z-index: 8000;
+    z-index: 10000;
 }
 
 .reason_text {
@@ -801,7 +801,7 @@
     }
 }
 
-@keyframes open_reason {
+@keyframes close_reason {
     0% {
         top: 0px;
     }
