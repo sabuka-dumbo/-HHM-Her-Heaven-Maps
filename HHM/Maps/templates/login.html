@@ -14,7 +14,8 @@
             <img class="sign_img" src="https://img.freepik.com/free-photo/portrait-young-woman-browsing-mobile-phone_23-2148597701.jpg?t=st=1728802579~exp=1728806179~hmac=f6ffd6d66a84544eacbcdddbe851f0bee3b64bbd5a0fd99c1091847e340804bd&w=740">
         </div>
 
-        <form class="part2" method="" action="">
+        <form class="part2" method="post" action="{% url 'login' %}">
+            {% csrf_token %}
             <h1 class="title">Her Haven Maps <b style="font-size: 3vw; color: gray;">(HHM)</b></h1>
             <input class="input" name="email" type="email" placeholder="Enter email" id="email">
             <input class="input" name="password" type="password" placeholder="Enter password" id="password">
@@ -35,7 +36,7 @@
             email.addEventListener("input", validateForm);
         
             function validateForm() {
-                if (password.value.length >= 3 && email.value.length !== 0) {
+                if (password.value.length >= 1 && email.value.length !== 0) {
                     submit.disabled = false;
                 } else {
                     submit.disabled = true;
