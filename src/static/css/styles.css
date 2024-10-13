@@ -263,6 +263,22 @@
     color: white;
 }
 
+.sp_close {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 15%;
+    margin: 0;
+    padding: 7px;
+    background-color: red;
+    margin-right: 10%;
+    font-size: 1.5vw;
+    font-family: "Itim";
+    font-weight: bold;
+    border-radius: 1.5vw;
+    color: white;
+}
+
 .sp_street {
     position: relative;
     top: -8px;
@@ -299,6 +315,366 @@
     height: calc(100vh - 100px);
 }
 
+
+
+
+
+
+
+
+
+/* responsive */
+@media screen and (max-width: 1000px) {
+    .sp_name {
+        position: relative;
+        top: 4px;
+        left: 0;
+        width: 55%;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        margin-left: 10%;
+        font-size: 2.8vw;
+        font-family: "Itim";
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .sp_open {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        width: 15%;
+        margin: 0;
+        padding: 7px;
+        background-color: lime;
+        margin-right: 10%;
+        font-size: 2.2vw;
+        font-family: "Itim";
+        font-weight: bold;
+        border-radius: 1.5vw;
+        color: white;
+    }
+
+    .sp_close {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        width: 15%;
+        margin: 0;
+        padding: 7px;
+        background-color: red;
+        margin-right: 10%;
+        font-size: 2.2vw;
+        font-family: "Itim";
+        font-weight: bold;
+        border-radius: 1.5vw;
+        color: white;
+    }
+
+    .sp_street {
+        position: relative;
+        top: -8px;
+        left: 0;
+        width: 80%;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        margin-left: 10%;
+        font-size: 2.2vw;
+        font-family: "Itim";
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #949494;
+    }
+
+    .searched_title {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 80%;
+        margin: 0;
+        padding: 0;
+        margin-left: 10%;
+        margin-top: 10px;
+        font-size: 3vw;
+        font-family: "Itim";
+        font-weight: bold;
+    }
+
+    .search_tag {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: max-content;
+        height: max-content;
+        margin: 0;
+        padding: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-radius: 1vw;
+        font-size: 3vw;
+        font-family: "Itim";
+        font-weight: bold;
+        background-color: #EFEFEF;
+        color: #949494;
+        outline: none;
+        border: 1px solid #6C6C6C;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .search_field {
+        position: relative;
+        top: 0;
+        left: 10%;
+        width: 80%;
+        height: max-content;
+        border: 2px #949494 solid;
+        border-radius: 0.6vw;
+        background-color: #EFEFEF;
+        color: black;
+        font-size: 4vw;
+        font-family: "Itim";
+        font-weight: bold;
+        outline: none;
+        padding: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .navigations_icons {
+        position: relative;
+        top: 0;
+        left: calc((100% - 5vw) / 2);
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .navigations_text {
+        position: relative;
+        top: -4px;
+        left: 0;
+        width: 100%;
+        height: max-content;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: black;
+        font-family: "Itim";
+        font-size: 2.4vw;
+        font-weight: bold;
+    }
+
+    .navbar_title {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: max-content;
+        height: max-content;
+        padding: 0;
+        margin: 0;
+        font-size: 4vw;
+        font-family: "Itim";
+        font-weight: bold;
+        margin-left: 3.5vw;
+    }
+    
+    .navbar_country_title {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: max-content;
+        height: max-content;
+        padding: 0;
+        margin: 0;
+        font-size: 3vw;
+        font-family: "Itim";
+        font-weight: bold;
+        margin-left: 0.5vw;
+        margin-top: 0.5vw;
+        color: gray;
+    }
+
+    .navbar_profile_icon {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .navbar_profile_drop_icon {
+        width: 3vw;
+        height: 3vw;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .sidebar {
+        z-index: 6;
+    }
+    
+    .navbar_title {
+        font-size: 6vw;
+    }
+
+    .navbar_country_title {
+        font-size: 4vw;
+    }
+
+    .burgermenu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: max-content;
+    }
+
+    .span {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 10px;
+        margin-bottom: 3px;
+        background-color: black;
+        display: inline-block;
+        margin-left: 20%;
+    }
+
+    .navigations_icons {
+        width: 8vw;
+        height: 8vw;
+        left: calc((100% - 8vw) / 2);
+    }
+
+    .navigations_text {
+        font-size: 4vw;
+    }
+    
+    .search {
+        left: -300px;
+        display: none;
+        z-index: 5;
+    }
+
+    .map {
+        width: calc(100% - 100px);
+        left: 100px;
+    }
+
+    .navbar_profile_icon {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .navbar_profile_drop_icon {
+        width: 5vw;
+        height: 5vw;
+    }
+    
+}
+
+
+/* animations */
+
+@keyframes span1_open {
+    0% {
+        rotate: 0;
+        top: 0;
+    }
+
+    100% {
+        rotate: 45deg;
+        top: 3.5vw;   
+    }
+}
+
+@keyframes span2_open {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes span3_open {
+    0% {
+        rotate: 0;
+        top: 0;   
+    }
+
+    100% {
+        rotate: -45deg;
+        top: -3.5vw;   
+    }
+}
+
+@keyframes span1_close {
+    0% {
+        rotate: 45deg;
+        top: 3.5vw;
+    }
+
+    100% {
+        rotate: 0deg;
+        top: 0;   
+    }
+}
+
+@keyframes span2_close {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes span3_close {
+    0% {
+        rotate: -45deg;
+        top: -3.5vw;  
+    }
+
+    100% {
+        rotate: 0deg;
+        top: 0;   
+    }
+}
+
+@keyframes bar_open {
+    0% {
+        left: -300px;
+    }
+
+    100% {
+        left: 100px;
+        display: block;
+    }
+}
+
+@keyframes bar_close {
+    0% {
+        left: 100px;
+    }
+
+    100% {
+        left: -300px;
+        display: none;
+    }
+}
 
 
 
