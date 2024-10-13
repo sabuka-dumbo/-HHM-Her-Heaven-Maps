@@ -244,3 +244,9 @@ function showLocation(one, two, text) {
         }, 10000);
     })
 }
+
+function Search(event, list) {
+    if (event.key === 'Enter') {
+
+    }
+}
