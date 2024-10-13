@@ -15,7 +15,9 @@ def create_app(test_config:typing.Union[None, dict] =None):
     app.config['SESSION_USE_SIGNER'] = True
 #    app.config['SESSION_REDIS'] = redis.from_url('redis://127.0.0.1:6379')
 
-    # yo main part of register is done
+# yo register and login is done (i'll do responsives later) now you can add login and register funcs
+# and one more thing. can you make page 404 erro (in case if someone opens page that we dont have like
+# 127.0.0.1:5000/nigga/ or smth lol)
 
     # If test_config is supplied, it most likely mean we are running tests
     if test_config:
